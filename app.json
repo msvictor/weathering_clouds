@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "weathering_clouds",
+    "slug": "weathering_clouds",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
