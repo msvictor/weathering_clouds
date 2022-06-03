@@ -1,0 +1,3 @@
+export default {
+  SELECTED_THEME: '@WEATHERING_C/SELECTED_THEME',
+};
