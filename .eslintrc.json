@@ -30,10 +30,12 @@
   ],
   "rules": {
     "camelcase": "off",
-    "no-plusplus": "off",
     "global-require": "off",
-    "no-use-before-define": "off",
     "class-methods-use-this": "off",
+
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "no-use-before-define": "off",
 
     "prettier/prettier": "error",
 
