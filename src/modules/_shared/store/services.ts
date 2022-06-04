@@ -4,11 +4,11 @@ import { GetPersistConfigResponse } from './type';
 
 export function getPersistConfig(
   key: string,
-  whitelist?: string[]
+  whitelist: string[] = ['']
 ): GetPersistConfigResponse {
   return {
     key,
+    whitelist,
     storage: AsyncStorage,
-    whitelist: whitelist ?? [''],
   };
 }

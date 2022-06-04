@@ -4,7 +4,7 @@ import { render } from '@testing-library/react-native';
 
 import { Icon } from './icon.component';
 
-describe('@box: component checks', () => {
+describe('@Icon: component checks', () => {
   it('should render', () => {
     const component = render(<Icon name="cloud" />);
 
