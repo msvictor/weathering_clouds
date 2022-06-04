@@ -7,7 +7,7 @@ export const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } =
 const wscale: number = SCREEN_WIDTH / 375;
 const hscale: number = SCREEN_HEIGHT / 667;
 
-export default function normalize(
+export function normalize(
   size: number,
   based: 'width' | 'height' = 'width'
 ): number {
