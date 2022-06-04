@@ -4,8 +4,11 @@ type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 
 type FontStyle = 'italic' | 'normal';
 
+type ContentStyle = 'lowercase' | 'capitalize' | 'uppercase' | 'none';
+
 export interface TextProps {
   children: string;
+  contentStyle?: ContentStyle;
   fontWeight?: FontWeight;
   fontStyle?: FontStyle;
   fontSize?: ThemeFontSizeType | number;
@@ -13,6 +16,7 @@ export interface TextProps {
 }
 
 export interface TextBaseProps {
+  contentStyle: string;
   fontWeight: number;
   fontStyle: string;
   fontSize: number;

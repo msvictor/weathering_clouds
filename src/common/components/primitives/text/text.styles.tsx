@@ -7,4 +7,5 @@ export const TextBase = styled.Text<TextBaseProps>`
   font-size: ${(props) => props.fontSize}px;
   font-style: ${(props) => props.fontStyle};
   font-weight: ${(props) => props.fontWeight};
+  text-transform: ${(props) => props.contentStyle}; ;
 `;

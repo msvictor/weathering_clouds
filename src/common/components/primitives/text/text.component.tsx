@@ -12,6 +12,7 @@ const Text: React.FC<TextProps> = ({
   fontSize = 'md',
   fontStyle = 'normal',
   fontWeight = 'regular',
+  contentStyle = 'none',
 }) => {
   const { theme } = useTheme();
 
@@ -38,10 +39,11 @@ const Text: React.FC<TextProps> = ({
 
   return (
     <TextBase
-      color={convertedColor}
-      fontSize={convertedFontSize}
+      contentStyle={contentStyle}
       fontWeight={convertedFontWeight}
       fontStyle={fontStyle}
+      fontSize={convertedFontSize}
+      color={convertedColor}
     >
       {children}
     </TextBase>
