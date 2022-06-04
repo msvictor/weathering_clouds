@@ -5,6 +5,7 @@ type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 type FontStyle = 'italic' | 'normal';
 
 export interface TextProps {
+  children: string;
   fontWeight?: FontWeight;
   fontStyle?: FontStyle;
   fontSize?: ThemeFontSizeType | number;
