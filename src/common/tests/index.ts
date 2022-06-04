@@ -1,0 +1,1 @@
+export { fnWrapperInTheme } from './fnWrapperInTheme';
