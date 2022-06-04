@@ -9,7 +9,11 @@ const App = createNativeStackNavigator();
 
 const AppRoutes: React.FC = () => {
   return (
-    <App.Navigator>
+    <App.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <App.Screen
         name={AppRoutesNames.WEATHER_DASHBOARD}
         component={Screens.WeatherDashboard}
