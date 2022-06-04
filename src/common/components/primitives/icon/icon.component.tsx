@@ -2,7 +2,7 @@ import React from 'react';
 
 import Icomoon from 'react-native-icomoon';
 
-import IconSet from '#core/utils/icon_set.json';
+import IconSet from '#core/utils/icons/icon_set.json';
 
 import { IconProps } from './icon.types';
 

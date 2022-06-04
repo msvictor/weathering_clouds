@@ -1,24 +1,30 @@
-import { ThemeColorsType, ThemeFontSizeType } from '#common/theme';
+import { TextProps as RNTextProps } from 'react-native';
 
-type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
+import {
+  ThemeBackgroundPropsType,
+  ThemeDimensionPropsType,
+  ThemeFlexPropsType,
+  ThemeOpacityPropsType,
+  ThemeOverflowPropsType,
+  ThemeTextPropsType,
+  ThemeZIndexPropsType,
+  ThemeBorderPropsType,
+  ThemeSpacingPropsType,
+  ThemeRoundedPropsType,
+} from '#common/theme';
 
-type FontStyle = 'italic' | 'normal';
-
-type ContentStyle = 'lowercase' | 'capitalize' | 'uppercase' | 'none';
-
-export interface TextProps {
-  children: string;
-  contentStyle?: ContentStyle;
-  fontWeight?: FontWeight;
-  fontStyle?: FontStyle;
-  fontSize?: ThemeFontSizeType | number;
-  color?: ThemeColorsType;
-}
-
-export interface TextBaseProps {
-  contentStyle: string;
-  fontWeight: number;
-  fontStyle: string;
-  fontSize: number;
-  color: string;
+export interface TextProps
+  extends Omit<RNTextProps, 'accessibilityRole'>,
+    ThemeSpacingPropsType,
+    ThemeRoundedPropsType,
+    ThemeBorderPropsType,
+    ThemeTextPropsType,
+    ThemeDimensionPropsType,
+    ThemeOverflowPropsType,
+    ThemeOpacityPropsType,
+    ThemeZIndexPropsType,
+    ThemeFlexPropsType,
+    Pick<ThemeBackgroundPropsType, 'bg'>,
+    Pick<ThemeFlexPropsType, 'flex'> {
+  children: React.ReactNode;
 }

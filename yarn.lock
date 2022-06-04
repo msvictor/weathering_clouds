@@ -4449,7 +4449,7 @@ expo-file-system@~14.0.0:
     "@expo/config-plugins" "^4.0.14"
     uuid "^3.4.0"
 
-expo-font@~10.1.0:
+expo-font@^10.1.0, expo-font@~10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-10.1.0.tgz#2e8f8954943c5afca8444c1ffb1d74623c6a4fb6"
   integrity sha512-vmhzpE95Ym4iOj8IELof+C/3Weert2B3LyxV5rBjGosjzBdov+o+S6b5mN7Yc9kyEGykwB6k7npL45X3hFYDQA==

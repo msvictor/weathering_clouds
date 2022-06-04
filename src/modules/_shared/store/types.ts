@@ -1,6 +1,6 @@
 import { AsyncStorageStatic } from '@react-native-async-storage/async-storage/lib/typescript/types';
 
-import { UserState } from '#modules/user/reducers/type';
+import { UserState } from '#modules/user/reducers/types';
 
 export interface ModulesState {
   user: UserState;

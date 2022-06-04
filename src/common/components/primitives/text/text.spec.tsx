@@ -13,7 +13,7 @@ const TestText: React.FC<TextProps> = (props) => {
 
 describe('@Text: component checks', () => {
   it('should render', () => {
-    const component = render(<TestText />);
+    const component = render(<TestText>Hello</TestText>);
 
     expect(component.toJSON()).toBeTruthy();
   });

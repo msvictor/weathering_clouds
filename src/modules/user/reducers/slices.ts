@@ -5,7 +5,7 @@ import { StorageConstants } from '#core/constants';
 import { getPersistConfig } from '#modules/_shared/store/services';
 
 import { getUserData } from './thunks';
-import { UserState } from './type';
+import { UserState } from './types';
 
 const initialState: UserState = {
   id: '',

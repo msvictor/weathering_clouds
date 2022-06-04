@@ -41,17 +41,13 @@ export const getFontWeight = (
   fontFamily: TextProps['fontFamily'],
   fontWeight: TextProps['fontWeight']
 ): any => {
-  if (fontFamily === '' || !fontWeight) {
-    return fontWeight;
-  }
-
-  if (themeFontFamily) {
+  if (themeFontFamily && fontWeight) {
     if (typeof themeFontFamily[fontWeight] !== 'undefined') {
       return Platform.select({ ios: fontWeight, android: 'normal' });
     }
   }
 
-  if (!fontFamily) {
+  if (fontFamily && fontWeight) {
     return fontWeight;
   }
 
