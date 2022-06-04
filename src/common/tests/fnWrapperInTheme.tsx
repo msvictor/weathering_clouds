@@ -1,15 +1,9 @@
 import React from 'react';
 
-import { ThemeProvider } from 'styled-components/native';
-
-import theme from '#common/theme';
+import { ManageThemeProvider as ThemeProvider } from '#common/hooks/ThemeContext';
 
 export function fnWrapperInTheme(
   children: React.ReactNode
 ): React.ReactElement {
-  return (
-    <ThemeProvider theme={{ ...theme.default, ...theme.dark }}>
-      {children}
-    </ThemeProvider>
-  );
+  return <ThemeProvider>{children}</ThemeProvider>;
 }
