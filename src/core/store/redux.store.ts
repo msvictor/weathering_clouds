@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { persistStore } from 'redux-persist';
 
 import rootReducer from './root.reducer';
-import { ApplicationState } from './type';
+import { ApplicationState } from './types';
 
 const AppStore: Store<ApplicationState> = configureStore({
   reducer: rootReducer,

@@ -7,16 +7,7 @@ import { ThemeProvider } from 'styled-components/native';
 import themes, { ThemeType } from '#common/theme';
 import { StorageConstants } from '#core/constants';
 
-type ThemeKey = 'light' | 'dark';
-
-interface ThemeProps {
-  children: React.ReactNode;
-}
-
-interface ThemeContextData {
-  theme: ThemeType;
-  toggleTheme: () => void;
-}
+import { ThemeContextData, ThemeKey, ThemeProps } from './types';
 
 const ThemeContext = React.createContext<ThemeContextData>(
   {} as ThemeContextData

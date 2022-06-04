@@ -4,7 +4,7 @@ import Icomoon from 'react-native-icomoon';
 
 import IconSet from '#core/utils/icon_set.json';
 
-import { IconProps } from './icon.type';
+import { IconProps } from './icon.types';
 
 const Icon: React.FC<IconProps> = ({ name, ...rest }) => {
   return <Icomoon iconSet={IconSet} name={name} {...rest} />;
