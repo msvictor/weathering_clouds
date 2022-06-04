@@ -6,7 +6,6 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -28,6 +27,7 @@
     "prettier",
     "eslint-plugin-import-helpers"
   ],
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "camelcase": "off",
     "global-require": "off",
@@ -40,10 +40,11 @@
     "prettier/prettier": "error",
 
     "react/jsx-fragments": "off",
-    "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/function-component-definition": "off",
+    "react/jsx-no-useless-fragment": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
 
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",

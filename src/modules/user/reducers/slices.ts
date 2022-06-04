@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import persistReducer from 'redux-persist/es/persistReducer';
 
 import { StorageConstants } from '#core/constants';
-import { getPersistConfig } from '#modules/store/services';
+import { getPersistConfig } from '#modules/_shared/store/services';
 
 import { getUserData } from './thunks';
 import { UserState } from './type';

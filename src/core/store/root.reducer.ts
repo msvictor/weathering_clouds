@@ -1,6 +1,6 @@
 import { AnyAction, combineReducers, Reducer } from '@reduxjs/toolkit';
 
-import { modules } from '#modules/store/modules.reducer';
+import { modules } from '#modules/_shared/store/modules.reducer';
 
 const combinedReducers = combineReducers({
   modules,
