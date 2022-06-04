@@ -4,9 +4,22 @@ import light from './themeLight';
 
 export default { dark, light, default: themeDefault };
 export {
-  ThemeType,
   ThemeColorsType,
-  ThemeSpacingType,
-  ThemeFontSizeType,
-  ThemeBorderRadiusType,
+  ThemeFontSizingType,
+  ThemeSpacingSizingType,
+  ThemeBorderRadiusSizingType,
+  ThemeSpacingPropsType,
+  ThemeFlexPropsType,
+  ThemeTextPropsType,
+  ThemeRoundedPropsType,
+  ThemeDimensionPropsType,
+  ThemeBackgroundPropsType,
+  ThemeOpacityPropsType,
+  ThemeColorsPropsType,
+  ThemeZIndexPropsType,
+  ThemeBorderPropsType,
+  ThemeTextFontWeightType,
+  ThemeOverflowPropsType,
+  ThemeProps,
+  ThemeType,
 } from './theme.types';

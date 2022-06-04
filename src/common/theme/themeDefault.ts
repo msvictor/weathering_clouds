@@ -31,9 +31,9 @@ export default {
     sm: 4,
     md: 6,
     lg: 8,
-    '2lg': 10,
-    xl: 12,
-    '2xl': 30,
+    xl: 10,
+    '2xl': 12,
+    '4xl': 30,
     circle: 99999,
   },
 
