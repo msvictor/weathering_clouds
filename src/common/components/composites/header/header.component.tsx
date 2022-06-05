@@ -8,19 +8,37 @@ import { HeaderProps } from './header.types';
 const Header: React.FC<HeaderProps> = ({ title, type }) => {
   const { theme } = useTheme();
 
+  const refresh = React.useCallback(() => {
+    return (
+      <View position="absolute" right={5}>
+        <Icon
+          name="refresh"
+          size={theme.fontSize['2xl']}
+          color={theme.colors.text}
+        />
+      </View>
+    );
+  }, [theme.fontSize, theme.colors.text]);
+
+  const icon = React.useCallback(
+    (name: string, size: number) => {
+      return (
+        <View position="absolute">
+          <Icon name={name} size={size} color={theme.colors.text} />
+        </View>
+      );
+    },
+    [theme.colors.text]
+  );
+
   switch (type) {
     case 'back':
       return (
         <View py="md" flexDir="row" alignItems="center" position="relative">
-          <View position="absolute">
-            <Icon
-              name="chevron-left"
-              size={theme.fontSize.xl}
-              color={theme.colors.text}
-            />
-          </View>
+          {refresh()}
+          {icon('chevron-left', theme.fontSize.xl)}
 
-          <View py="md" flex={1} alignItems="center" justifyContent="center">
+          <View flex={1} alignItems="center" justifyContent="center">
             <Text>{title}</Text>
           </View>
         </View>
@@ -29,15 +47,10 @@ const Header: React.FC<HeaderProps> = ({ title, type }) => {
     case 'menu':
       return (
         <View py="md" flexDir="row" alignItems="center" position="relative">
-          <View position="absolute">
-            <Icon
-              name="menu"
-              size={theme.fontSize['3xl']}
-              color={theme.colors.text}
-            />
-          </View>
+          {refresh()}
+          {icon('menu', theme.fontSize['3xl'])}
 
-          <View py="md" flex={1} alignItems="center" justifyContent="center">
+          <View flex={1} alignItems="center" justifyContent="center">
             <Text>{title}</Text>
           </View>
         </View>
@@ -46,7 +59,14 @@ const Header: React.FC<HeaderProps> = ({ title, type }) => {
     case 'default':
     default:
       return (
-        <View py="md" alignItems="center" justifyContent="center">
+        <View
+          py="md"
+          flexDir="row"
+          alignItems="center"
+          justifyContent="center"
+          position="relative"
+        >
+          {refresh()}
           <Text>{title}</Text>
         </View>
       );
