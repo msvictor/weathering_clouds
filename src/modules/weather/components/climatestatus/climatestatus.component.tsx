@@ -32,9 +32,7 @@ const ClimateStatus: React.FC<ClimateStatusProps> = ({
           size={theme.fontSize['5xl']}
         />
         <View ml="sm">
-          <Text fontSize="2xl">
-            {translate('weather.climate-status.today')}
-          </Text>
+          <Text fontSize="2xl">{translate('weather.today')}</Text>
           <Text mt="xs" fontSize="sm" color="fxGray" fontWeight="300">
             {date}
           </Text>
@@ -55,8 +53,8 @@ const ClimateStatus: React.FC<ClimateStatusProps> = ({
       </Text>
 
       <Text mt="xs" fontSize="sm" color="fxGray" fontWeight="300">
-        {`${translate('weather.climate-status.feels-like')} ${feelsLike}`} -{' '}
-        {`${translate('weather.climate-status.sunset')} ${sunset} `}
+        {`${translate('weather.feels-like')} ${feelsLike}`} -{' '}
+        {`${translate('weather.sunset')} ${sunset} `}
       </Text>
     </View>
   );

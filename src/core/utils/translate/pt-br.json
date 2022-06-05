@@ -3,10 +3,9 @@
     "header-title": "Weathering Clouds"
   },
   "weather": {
-    "climate-status" :{
-      "today": "Today",
-      "feels-like": "Feels Like",
-      "sunset": "Sunset"
-    }
+    "today": "Today",
+    "sunset": "Sunset",
+    "feels-like": "Feels Like",
+    "next-7-days": "Next 7 Days"
   }
 }

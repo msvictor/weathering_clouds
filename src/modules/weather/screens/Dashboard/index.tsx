@@ -2,7 +2,7 @@ import React from 'react';
 
 import { View } from '#common/components/primitives';
 import { DefaultWrapper } from '#common/components/wrappers';
-import { ClimateStatus } from '#modules/weather/components';
+import { ClimateStatus, DashboardForecasts } from '#modules/weather/components';
 
 const Dashboard: React.FC = () => {
   return (
@@ -16,7 +16,8 @@ const Dashboard: React.FC = () => {
         feelsLike="30"
       />
 
-      <View flex={1} bg="red" />
+      <DashboardForecasts forecast={['', '', '', '', '']} />
+
       <View flex={1} bg="yellow" />
     </DefaultWrapper>
   );
