@@ -14,7 +14,7 @@ const normalizeTranslate = {
 const getLanguageByDevice = (): string => {
   const language =
     Platform.OS === 'ios'
-      ? NativeModules.SettingsManager.settings.AppleLocale
+      ? NativeModules.SettingsManager?.settings.AppleLocale
       : NativeModules.I18nManager.localeIdentifier;
 
   return language || normalizeTranslate.pt_BR;
