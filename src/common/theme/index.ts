@@ -8,6 +8,7 @@ export {
   ThemeFontSizingType,
   ThemeSpacingSizingType,
   ThemeBorderRadiusSizingType,
+  ThemeShadowSizingPropsType,
   ThemeSpacingPropsType,
   ThemeFlexPropsType,
   ThemeTextPropsType,
@@ -21,6 +22,7 @@ export {
   ThemeTextFontWeightType,
   ThemeOverflowPropsType,
   ThemePositionPropsType,
+  ThemeShadowPropsType,
   ThemeProps,
   ThemeType,
 } from './theme.types';

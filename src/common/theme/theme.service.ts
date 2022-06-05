@@ -210,3 +210,17 @@ export const createBorderColorStyles = (
 
   return computedStyle;
 };
+
+export const createShadowStyles = (props: any, theme: ThemeType): any => {
+  let computedStyle: any = {};
+
+  if (props.shadow) {
+    computedStyle = {
+      ...(theme.shadow &&
+        theme.shadow[props.shadow as keyof typeof theme.shadow]),
+      shadowColor: getThemeColor(theme.colors, props.shadowColor),
+    };
+  }
+
+  return computedStyle;
+};

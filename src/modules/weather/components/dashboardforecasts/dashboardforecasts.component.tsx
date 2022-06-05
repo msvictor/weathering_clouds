@@ -48,7 +48,12 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
 
       <ScrollView horizontal>
         {forecast.map(() => (
-          <ForecastItem icon="cloud" temp="26C" time="12AM" />
+          <ForecastItem
+            key={Math.random().toString()}
+            icon="cloud"
+            temp="26C"
+            time="12AM"
+          />
         ))}
       </ScrollView>
     </View>

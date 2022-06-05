@@ -54,6 +54,15 @@ export type ThemeTextFontWeightType =
   | '500'
   | '700';
 
+export type ThemeShadowSizingPropsType =
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | '2xl'
+  | 'none';
+
 export interface ThemeSpacingPropsType {
   m?: ThemeSpacingSizingType | number;
   mt?: ThemeSpacingSizingType | number;
@@ -170,6 +179,11 @@ export interface ThemeBackgroundPropsType {
   bg?: string;
   bgImg?: RNImageSourcePropType;
   bgMode?: 'contain' | 'cover' | 'stretch' | 'repeat';
+}
+
+export interface ThemeShadowPropsType {
+  shadow?: ThemeShadowSizingPropsType | number;
+  shadowColor?: string;
 }
 
 export interface ThemeOpacityPropsType {

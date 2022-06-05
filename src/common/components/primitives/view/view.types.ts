@@ -12,6 +12,7 @@ import {
   ThemeZIndexPropsType,
   ThemeOverflowPropsType,
   ThemePositionPropsType,
+  ThemeShadowPropsType,
 } from '#common/theme';
 
 export interface ViewProps
@@ -25,6 +26,7 @@ export interface ViewProps
     ThemeZIndexPropsType,
     ThemeOpacityPropsType,
     ThemePositionPropsType,
-    ThemeOverflowPropsType {
+    ThemeOverflowPropsType,
+    ThemeShadowPropsType {
   children?: React.ReactNode;
 }

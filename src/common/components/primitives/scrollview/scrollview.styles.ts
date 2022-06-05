@@ -5,6 +5,7 @@ import {
   createBorderWidthStyles,
   createRoundedStyles,
   createSpacingStyles,
+  createShadowStyles,
   getThemeColor,
 } from '#common/theme/theme.service';
 
@@ -56,7 +57,7 @@ export const ScrollableView = styled.ScrollView<ScrollViewProps>`
       style = { ...style, overflow: props.overflow };
     }
     if (props.zIndex) {
-      style = { ...style, 'z-index': props.zIndex };
+      style = { ...style, 'z-index': props.zIndex.toString() };
     }
     if (props.borderStyle) {
       style = { ...style, 'border-style': props.borderStyle };
@@ -88,4 +89,5 @@ export const ScrollableView = styled.ScrollView<ScrollViewProps>`
   ${(props) => createSpacingStyles(props, props.theme.spacing)};
   ${(props) => createBorderColorStyles(props, props.theme.colors)};
   ${(props) => createRoundedStyles(props, props.theme.borderRadius)};
+  ${(props) => createShadowStyles(props, props.theme)};
 `;

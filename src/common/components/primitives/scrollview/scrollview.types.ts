@@ -12,6 +12,7 @@ import {
   ThemeOverflowPropsType,
   ThemeBackgroundPropsType,
   ThemePositionPropsType,
+  ThemeShadowPropsType,
 } from '#common/theme';
 
 export interface ScrollViewProps
@@ -25,7 +26,8 @@ export interface ScrollViewProps
     ThemeZIndexPropsType,
     ThemeOpacityPropsType,
     ThemePositionPropsType,
-    ThemeOverflowPropsType {
+    ThemeOverflowPropsType,
+    ThemeShadowPropsType {
   children?: React.ReactNode;
 }
 
