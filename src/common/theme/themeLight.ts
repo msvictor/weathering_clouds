@@ -2,7 +2,7 @@ export default {
   name: 'light',
   colors: {
     fxYellow: '#F7C50A',
-    fxGray: '#B9C5CB',
+    fxGray: '#8B959A',
     fxLightBlue: '#4697EA',
     fxLightest: '#FFFFFF',
     fxDarkest: '#000051',
