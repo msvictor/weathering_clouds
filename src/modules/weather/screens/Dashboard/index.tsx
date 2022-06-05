@@ -23,7 +23,7 @@ const Dashboard: React.FC = () => {
 
       <DashboardForecasts forecast={['', '', '', '', '']} />
 
-      <View flex={1} my="md">
+      <View flex={2} my="md">
         <Text mx="xl" fontWeight="700">
           {translate('weather.info')}
         </Text>

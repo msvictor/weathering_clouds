@@ -13,7 +13,7 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
   const { theme } = useTheme();
 
   return (
-    <View flex={1}>
+    <View flex={2}>
       <View
         mx="xl"
         my="md"

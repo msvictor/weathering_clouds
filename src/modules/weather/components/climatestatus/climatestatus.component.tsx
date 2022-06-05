@@ -20,7 +20,7 @@ const ClimateStatus: React.FC<ClimateStatusProps> = ({
   return (
     <View
       px="xl"
-      flex={2}
+      flex={3}
       flexDir="column"
       alignItems="center"
       justifyContent="center"
