@@ -8,6 +8,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { ManageThemeProvider as ThemeProvider } from '#common/hooks/ThemeContext';
 import AppRoutes from '#core/routes/app';
+import { NavigationService } from '#core/services';
 import { AppStore, Persistor } from '#core/store/redux.store';
 
 const App: React.FC = () => {
@@ -27,7 +28,11 @@ const App: React.FC = () => {
     <Provider store={AppStore}>
       <PersistGate loading={null} persistor={Persistor}>
         <SafeAreaProvider>
-          <NavigationContainer>
+          <NavigationContainer
+            ref={(nav) => {
+              NavigationService.setNavigator(nav);
+            }}
+          >
             <ThemeProvider>
               <AppRoutes />
             </ThemeProvider>
