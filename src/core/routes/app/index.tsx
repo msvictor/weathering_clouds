@@ -2,16 +2,22 @@ import React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { useTheme } from '#common/hooks';
+
 import AppRoutesNames from './routes.names';
 import * as Screens from './screens.components';
 
 const App = createNativeStackNavigator();
 
 const AppRoutes: React.FC = () => {
+  const { theme } = useTheme();
   return (
     <App.Navigator
       screenOptions={{
         headerShown: false,
+        contentStyle: {
+          backgroundColor: theme.colors.background,
+        },
       }}
     >
       <App.Screen
