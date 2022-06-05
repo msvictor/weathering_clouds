@@ -24,6 +24,7 @@ const ScrollView = React.forwardRef<ScrollViewRef, ScrollViewProps>(
       <ScrollableView
         {...rest}
         showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
           flex,
