@@ -8,6 +8,6 @@ export default {
     fxDarkest: '#000051',
     background: '#F2FBFF',
     text: '#566288',
-    accent: '#2B3766',
+    accent: '#F7430A',
   },
 };
