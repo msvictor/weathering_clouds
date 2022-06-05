@@ -1,5 +1,12 @@
 {
   "core": {
     "header-title": "Weathering Clouds"
+  },
+  "weather": {
+    "climate-status" :{
+      "today": "Today",
+      "feels-like": "Feels Like",
+      "sunset": "Sunset"
+    }
   }
 }
