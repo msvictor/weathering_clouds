@@ -1,11 +1,12 @@
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
 
 import { Icon, Text, View } from '#common/components/primitives';
 import { useTheme } from '#common/hooks';
 
 import { HeaderProps } from './header.types';
 
-const Header: React.FC<HeaderProps> = ({ title, type }) => {
+const Header: React.FC<HeaderProps> = ({ title, type, action }) => {
   const { theme } = useTheme();
 
   const refresh = React.useCallback(() => {
@@ -23,12 +24,14 @@ const Header: React.FC<HeaderProps> = ({ title, type }) => {
   const icon = React.useCallback(
     (name: string, size: number) => {
       return (
-        <View position="absolute">
-          <Icon name={name} size={size} color={theme.colors.text} />
+        <View position="absolute" zIndex={1000}>
+          <TouchableOpacity onPress={action}>
+            <Icon name={name} size={size} color={theme.colors.text} />
+          </TouchableOpacity>
         </View>
       );
     },
-    [theme.colors.text]
+    [action, theme.colors.text]
   );
 
   switch (type) {

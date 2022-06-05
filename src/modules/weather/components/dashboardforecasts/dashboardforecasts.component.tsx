@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 import { Icon, ScrollView, Text, View } from '#common/components/primitives';
 import { useTheme } from '#common/hooks';
@@ -32,7 +32,7 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
       >
         <Text fontWeight="700">{translate('weather.today')}</Text>
 
-        <Pressable onPress={handleNavigateToNextForecast}>
+        <TouchableOpacity onPress={handleNavigateToNextForecast}>
           <View flexDir="row" alignItems="center">
             <Text fontWeight="700" color="accent" mr="sm">
               {translate('weather.next-7-days')}
@@ -43,7 +43,7 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
               size={theme.fontSize.md}
             />
           </View>
-        </Pressable>
+        </TouchableOpacity>
       </View>
 
       <ScrollView horizontal>
