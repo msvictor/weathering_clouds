@@ -4,7 +4,7 @@ import { render } from '@testing-library/react-native';
 
 import { fnWrapperInTheme } from '#common/tests';
 
-import { ClimateCardInfo } from './climatecardinfo.componetn';
+import { ClimateCardInfo } from './climatecardinfo.component';
 import { ClimateCardInfoProps } from './climatecardinfo.types';
 
 const TestClimateCardInfo: React.FC<ClimateCardInfoProps> = (props) => {
