@@ -45,7 +45,7 @@ const DefaultWrapper: React.FC<DefaultWrapperProps> = ({
   );
 
   return (
-    <View p="lg" pt={addStatusBarHeight(5)}>
+    <View p="lg" pt={addStatusBarHeight(5)} flex={1}>
       {renderCloud(160, 34, undefined, -75)}
       {renderCloud(220, 80, -105)}
       {renderCloud(80, 265, undefined, 20)}
