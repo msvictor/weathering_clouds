@@ -20,6 +20,7 @@ export {
   ThemeBorderPropsType,
   ThemeTextFontWeightType,
   ThemeOverflowPropsType,
+  ThemePositionPropsType,
   ThemeProps,
   ThemeType,
 } from './theme.types';

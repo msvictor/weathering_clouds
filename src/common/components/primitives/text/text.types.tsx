@@ -11,6 +11,7 @@ import {
   ThemeBorderPropsType,
   ThemeSpacingPropsType,
   ThemeRoundedPropsType,
+  ThemePositionPropsType,
 } from '#common/theme';
 
 export interface TextProps
@@ -24,6 +25,7 @@ export interface TextProps
     ThemeOpacityPropsType,
     ThemeZIndexPropsType,
     ThemeFlexPropsType,
+    ThemePositionPropsType,
     Pick<ThemeBackgroundPropsType, 'bg'>,
     Pick<ThemeFlexPropsType, 'flex'> {
   children: React.ReactNode;

@@ -12,27 +12,80 @@ import {
 import { ViewProps } from './view.types';
 
 export const StaticView = styled.View<ViewProps>`
-  flex: ${(props) => props.flex ?? 1};
-  flex-direction: ${(props) => props.flexDir ?? 'row'};
-  flex-wrap: ${(props) => props.flexWrap ?? 'wrap'};
-  align-items: ${(props) => props.alignItems ?? 'flex-start'};
-  justify-content: ${(props) => props.justifyContent ?? 'flex-start'};
-  height: ${(props) => props.h ?? 'auto'};
-  width: ${(props) => props.w ?? 'auto'};
-  min-width: ${(props) => props.minW ?? 'auto'};
-  min-height: ${(props) => props.minH ?? 'auto'};
-  max-width: ${(props) => props.maxW ?? 'auto'};
-  max-height: ${(props) => props.maxH ?? 'auto'};
-  align-self: ${(props) => props.alignSelf ?? 'auto'};
-  opacity: ${(props) => props.opacity ?? 1};
-  overflow: ${(props) => props.overflow ?? 'visible'};
-  z-index: ${(props) => props.zIndex ?? 1};
-  border-style: ${(props) => props.borderStyle};
-  background-color: ${(props) =>
-    getThemeColor(
-      props.theme.colors,
-      props.bg ?? props.theme.colors.background
-    )};
+  ${(props) => {
+    let style = {};
+    if (props.flex) {
+      style = { ...style, flex: props.flex };
+    }
+    if (props.flexDir) {
+      style = { ...style, 'flex-direction': props.flexDir };
+    }
+    if (props.flexWrap) {
+      style = { ...style, 'flex-wrap': props.flexWrap };
+    }
+    if (props.alignItems) {
+      style = { ...style, 'align-items': props.alignItems };
+    }
+    if (props.justifyContent) {
+      style = { ...style, 'justify-content': props.justifyContent };
+    }
+    if (props.h) {
+      style = { ...style, height: props.h };
+    }
+    if (props.w) {
+      style = { ...style, width: props.w };
+    }
+    if (props.minH) {
+      style = { ...style, 'min-height': props.minH };
+    }
+    if (props.minW) {
+      style = { ...style, 'min-width': props.minW };
+    }
+    if (props.maxH) {
+      style = { ...style, 'max-height': props.maxH };
+    }
+    if (props.maxW) {
+      style = { ...style, 'max-width': props.maxW };
+    }
+    if (props.alignSelf) {
+      style = { ...style, 'align-self': props.alignSelf };
+    }
+    if (props.opacity) {
+      style = { ...style, opacity: props.opacity };
+    }
+    if (props.overflow) {
+      style = { ...style, overflow: props.overflow };
+    }
+    if (props.zIndex) {
+      style = { ...style, 'z-index': props.zIndex };
+    }
+    if (props.borderStyle) {
+      style = { ...style, 'border-style': props.borderStyle };
+    }
+    if (props.position) {
+      style = { ...style, position: props.position };
+    }
+    if (props.top) {
+      style = { ...style, top: props.top };
+    }
+    if (props.right) {
+      style = { ...style, right: props.right };
+    }
+    if (props.bottom) {
+      style = { ...style, bottom: props.bottom };
+    }
+    if (props.left) {
+      style = { ...style, left: props.left };
+    }
+    if (props.bg) {
+      style = {
+        ...style,
+        'background-color': getThemeColor(props.theme.colors, props.bg),
+      };
+    }
+
+    return style;
+  }}
   ${(props) => createBorderWidthStyles(props)};
   ${(props) => createSpacingStyles(props, props.theme.spacing)};
   ${(props) => createBorderColorStyles(props, props.theme.colors)};
@@ -40,27 +93,80 @@ export const StaticView = styled.View<ViewProps>`
 `;
 
 export const StaticImageView = styled.ImageBackground<ViewProps>`
-  flex: ${(props) => props.flex ?? 1};
-  flex-direction: ${(props) => props.flexDir ?? 'row'};
-  flex-wrap: ${(props) => props.flexWrap ?? 'wrap'};
-  align-items: ${(props) => props.alignItems ?? 'flex-start'};
-  justify-content: ${(props) => props.justifyContent ?? 'flex-start'};
-  height: ${(props) => props.h ?? 'auto'};
-  width: ${(props) => props.w ?? 'auto'};
-  min-width: ${(props) => props.minW ?? 'auto'};
-  min-height: ${(props) => props.minH ?? 'auto'};
-  max-width: ${(props) => props.maxW ?? 'auto'};
-  max-height: ${(props) => props.maxH ?? 'auto'};
-  align-self: ${(props) => props.alignSelf ?? 'auto'};
-  opacity: ${(props) => props.opacity ?? 1};
-  overflow: ${(props) => props.overflow ?? 'visible'};
-  z-index: ${(props) => props.zIndex ?? 1};
-  border-style: ${(props) => props.borderStyle};
-  background-color: ${(props) =>
-    getThemeColor(
-      props.theme.colors,
-      props.bg ?? props.theme.colors.background
-    )};
+  ${(props) => {
+    let style = {};
+    if (props.flex) {
+      style = { ...style, flex: props.flex };
+    }
+    if (props.flexDir) {
+      style = { ...style, 'flex-direction': props.flexDir };
+    }
+    if (props.flexWrap) {
+      style = { ...style, 'flex-wrap': props.flexWrap };
+    }
+    if (props.alignItems) {
+      style = { ...style, 'align-items': props.alignItems };
+    }
+    if (props.justifyContent) {
+      style = { ...style, 'justify-content': props.justifyContent };
+    }
+    if (props.h) {
+      style = { ...style, height: props.h };
+    }
+    if (props.w) {
+      style = { ...style, width: props.w };
+    }
+    if (props.minH) {
+      style = { ...style, 'min-height': props.minH };
+    }
+    if (props.minW) {
+      style = { ...style, 'min-width': props.minW };
+    }
+    if (props.maxH) {
+      style = { ...style, 'max-height': props.maxH };
+    }
+    if (props.maxW) {
+      style = { ...style, 'max-width': props.maxW };
+    }
+    if (props.alignSelf) {
+      style = { ...style, 'align-self': props.alignSelf };
+    }
+    if (props.opacity) {
+      style = { ...style, opacity: props.opacity };
+    }
+    if (props.overflow) {
+      style = { ...style, overflow: props.overflow };
+    }
+    if (props.zIndex) {
+      style = { ...style, 'z-index': props.zIndex };
+    }
+    if (props.borderStyle) {
+      style = { ...style, 'border-style': props.borderStyle };
+    }
+    if (props.position) {
+      style = { ...style, position: props.position };
+    }
+    if (props.top) {
+      style = { ...style, top: props.top };
+    }
+    if (props.right) {
+      style = { ...style, right: props.right };
+    }
+    if (props.bottom) {
+      style = { ...style, bottom: props.bottom };
+    }
+    if (props.left) {
+      style = { ...style, left: props.left };
+    }
+    if (props.bg) {
+      style = {
+        ...style,
+        'background-color': getThemeColor(props.theme.colors, props.bg),
+      };
+    }
+
+    return style;
+  }}
   ${(props) => createBorderWidthStyles(props)};
   ${(props) => createSpacingStyles(props, props.theme.spacing)};
   ${(props) => createBorderColorStyles(props, props.theme.colors)};

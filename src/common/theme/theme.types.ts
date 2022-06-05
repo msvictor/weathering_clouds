@@ -120,6 +120,7 @@ export interface ThemeTextPropsType {
   textDecorationStyle?: 'solid' | 'double' | 'dotted' | 'dashed';
   textDecorationColor?: string;
 }
+
 export interface ThemeBorderPropsType {
   borderColor?: string;
   borderTopColor?: string;
@@ -155,6 +156,14 @@ export interface ThemeDimensionPropsType {
   maxW?: number | string;
   h?: number | string;
   w?: number | string;
+}
+
+export interface ThemePositionPropsType {
+  position?: 'absolute' | 'relative';
+  top?: number;
+  right?: number;
+  bottom?: number;
+  left?: number;
 }
 
 export interface ThemeBackgroundPropsType {
