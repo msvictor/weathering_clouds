@@ -20,7 +20,7 @@ const AppRoutes: React.FC = () => {
   const { theme } = useTheme();
   const { setComponent, blockGestures } = useModal();
 
-  const { isLocationEnable } = useSelector(locationSelector);
+  const { isLocationEnable, isLoading } = useSelector(locationSelector);
 
   React.useEffect(() => {
     (async () => {
@@ -29,11 +29,11 @@ const AppRoutes: React.FC = () => {
   }, [dispatch, setComponent]);
 
   React.useLayoutEffect(() => {
-    if (!isLocationEnable) {
+    if (!isLocationEnable && !isLoading) {
       blockGestures();
       setComponent(<LocationErrorModal />);
     }
-  }, [isLocationEnable, blockGestures, setComponent]);
+  }, [isLocationEnable, isLoading, blockGestures, setComponent]);
 
   return (
     <App.Navigator

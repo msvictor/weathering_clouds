@@ -6,7 +6,7 @@ import { GetDeviceLocationResponse, LocationServicePermission } from './types';
 
 const getDeviceLocation = async (): Promise<GetDeviceLocationResponse> => {
   const { status } = await Location.requestForegroundPermissionsAsync();
-  if (status !== Location.PermissionStatus.GRANTED) {
+  if (status === Location.PermissionStatus.DENIED) {
     throw new GenericError(LocationServicePermission.REJECTED);
   }
 

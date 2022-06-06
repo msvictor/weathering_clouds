@@ -14,7 +14,7 @@ const initialState: LocationState = {
   long: 0,
   hasError: false,
   isLoading: false,
-  isLocationEnable: false,
+  isLocationEnable: true,
 };
 
 const userSlice = createSlice({
@@ -37,6 +37,7 @@ const userSlice = createSlice({
       .addCase(getDeviceLocationData.rejected, (state) => {
         state.isLoading = true;
         state.hasError = false;
+        state.isLocationEnable = false;
       })
       .addCase(
         getDeviceLocationData.fulfilled,
