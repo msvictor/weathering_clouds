@@ -1,0 +1,1 @@
+export { httpOpenWeather } from './HttpOpenWeather';
