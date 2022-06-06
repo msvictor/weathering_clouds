@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { format, isToday } from 'date-fns';
 
 const getFormattedDate = (date: number, formatString: string): string => {
   const parsedDate = format(new Date(date * 1000), formatString);
@@ -6,4 +6,8 @@ const getFormattedDate = (date: number, formatString: string): string => {
   return parsedDate;
 };
 
-export default { getFormattedDate };
+const checkIfIsToday = (date: number): boolean => {
+  return isToday(date * 1000);
+};
+
+export default { getFormattedDate, checkIfIsToday };

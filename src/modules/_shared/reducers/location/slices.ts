@@ -17,7 +17,7 @@ const initialState: LocationState = {
   isLocationEnable: true,
 };
 
-const userSlice = createSlice({
+const locationSlice = createSlice({
   name: StorageConstants.SLICE_LOCATION,
   initialState,
   reducers: {
@@ -53,9 +53,9 @@ const userSlice = createSlice({
       ),
 });
 
-export const { setLocation } = userSlice.actions;
+export const { setLocation } = locationSlice.actions;
 
 export default persistReducer(
   getPersistConfig(StorageConstants.SLICE_USER),
-  userSlice.reducer
+  locationSlice.reducer
 );

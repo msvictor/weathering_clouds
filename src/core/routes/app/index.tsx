@@ -26,7 +26,7 @@ const AppRoutes: React.FC = () => {
     (async () => {
       await dispatch(getDeviceLocationData());
     })();
-  }, [dispatch, setComponent]);
+  }, [dispatch]);
 
   React.useLayoutEffect(() => {
     if (!isLocationEnable && !isLoading) {

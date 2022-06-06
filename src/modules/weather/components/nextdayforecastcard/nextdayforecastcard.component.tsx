@@ -20,12 +20,12 @@ const NextDayForecastCard: React.FC<NextDayForecastCardProps> = ({
     <View my="xl" mx="lg">
       <Card>
         <View flexDir="row" alignItems="center" justifyContent="space-between">
-          <Text fontWeight="bold" fontSize="lg">
+          <Text color="fxDarkest" fontWeight="bold" fontSize="lg">
             {date}
           </Text>
 
           <View flexDir="row" alignItems="flex-end">
-            <Text fontWeight="bold" fontSize="lg">
+            <Text color="fxDarkest" fontWeight="bold" fontSize="lg">
               {max}
             </Text>
             <Text> - </Text>

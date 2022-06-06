@@ -12,7 +12,7 @@ const InfoRow: React.FC<InfoRowProps> = ({ label, description }) => {
       alignItems="center"
       justifyContent="space-between"
     >
-      <Text fontWeight="bold" fontSize="sm">
+      <Text color="fxDarkest" fontWeight="bold" fontSize="sm">
         {label}
       </Text>
       <Text fontWeight="bold" fontSize="sm" color="fxGray" opacity={0.5}>

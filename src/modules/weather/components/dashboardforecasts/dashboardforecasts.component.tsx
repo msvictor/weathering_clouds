@@ -6,6 +6,7 @@ import { useTheme } from '#common/hooks';
 import { translate } from '#common/utils/Translate';
 import AppRoutesNames from '#core/routes/app/routes.names';
 import { NavigationService } from '#core/services';
+import { DateService } from '#modules/_shared/services';
 
 import { ForecastItem } from './components';
 import { DashboardForecastsProps } from './dashboardforecasts.types';
@@ -30,12 +31,21 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
         alignItems="center"
         justifyContent="space-between"
       >
-        <Text fontWeight="700">{translate('weather.today')}</Text>
+        <Text
+          py="xs"
+          px="lg"
+          rounded="xl"
+          borderWidth={0.5}
+          borderColor="text"
+          fontWeight="700"
+        >
+          {translate('weather.today')}
+        </Text>
 
         <TouchableOpacity onPress={handleNavigateToNextForecast}>
           <View flexDir="row" alignItems="center">
             <Text fontWeight="700" color="accent" mr="sm">
-              {translate('weather.next-7-days')}
+              {translate('weather.next-5-days')}
             </Text>
             <Icon
               name="chevron-right"
@@ -47,12 +57,14 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
       </View>
 
       <ScrollView horizontal>
-        {forecast.map(() => (
+        {forecast.map((item) => (
           <ForecastItem
             key={Math.random().toString()}
             icon="cloud"
-            temp="26C"
-            time="12AM"
+            temp={`${item.main.temp_min.toFixed(0)} ${translate(
+              'weather.degree-symbol'
+            )}`}
+            time={DateService.getFormattedDate(item.dt ?? 0, 'HH:mm')}
           />
         ))}
       </ScrollView>
