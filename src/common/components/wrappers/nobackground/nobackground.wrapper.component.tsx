@@ -15,7 +15,7 @@ const NoBackgroundWrapper: React.FC<NoBackgroundWrapperProps> = ({
   headerAction,
 }) => {
   return (
-    <View p="lg" pt={getStatusBarHeight(true) + 5} flex={1}>
+    <View px="lg" pt={getStatusBarHeight(true) + 5} flex={1}>
       <Header type={headerType} title={headerTitle} action={headerAction} />
 
       <View flex={1}>{children}</View>
