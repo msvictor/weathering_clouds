@@ -4,4 +4,5 @@ export interface NoBackgroundWrapperProps {
   headerTitle?: string;
   headerType?: HeaderType;
   headerAction?: () => void;
+  headerRefreshAction?: () => void;
 }

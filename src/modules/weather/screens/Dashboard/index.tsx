@@ -70,7 +70,7 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <DefaultWrapper>
+    <DefaultWrapper headerRefreshAction={getData}>
       <ScrollView>
         <ClimateStatus city={city} state={state} weather={weather} />
 

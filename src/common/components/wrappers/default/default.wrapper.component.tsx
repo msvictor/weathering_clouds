@@ -15,6 +15,7 @@ const DefaultWrapper: React.FC<DefaultWrapperProps> = ({
   headerType = 'default',
   headerTitle = translate('core.header-title'),
   headerAction,
+  headerRefreshAction,
 }) => {
   const { theme } = useTheme();
 
@@ -51,7 +52,12 @@ const DefaultWrapper: React.FC<DefaultWrapperProps> = ({
       {renderCloud(220, 80, -105)}
       {renderCloud(80, 265, undefined, 20)}
 
-      <Header type={headerType} title={headerTitle} action={headerAction} />
+      <Header
+        type={headerType}
+        title={headerTitle}
+        action={headerAction}
+        refresh={headerRefreshAction}
+      />
 
       <View flex={1}>{children}</View>
     </View>

@@ -6,20 +6,22 @@ import { useTheme } from '#common/hooks';
 
 import { HeaderProps } from './header.types';
 
-const Header: React.FC<HeaderProps> = ({ title, type, action }) => {
+const Header: React.FC<HeaderProps> = ({ title, type, action, refresh }) => {
   const { theme } = useTheme();
 
-  const refresh = React.useCallback(() => {
+  const refreshIcon = React.useCallback(() => {
     return (
-      <View position="absolute" right={5}>
-        <Icon
-          name="refresh"
-          size={theme.fontSize['2xl']}
-          color={theme.colors.text}
-        />
+      <View position="absolute" right={5} zIndex={1000}>
+        <TouchableOpacity onPress={refresh}>
+          <Icon
+            name="refresh"
+            size={theme.fontSize['2xl']}
+            color={theme.colors.text}
+          />
+        </TouchableOpacity>
       </View>
     );
-  }, [theme.fontSize, theme.colors.text]);
+  }, [theme.fontSize, theme.colors.text, refresh]);
 
   const icon = React.useCallback(
     (name: string, size: number) => {
@@ -38,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ title, type, action }) => {
     case 'back':
       return (
         <View py="md" flexDir="row" alignItems="center" position="relative">
-          {refresh()}
+          {refreshIcon()}
           {icon('chevron-left', theme.fontSize.xl)}
 
           <View flex={1} alignItems="center" justifyContent="center">
@@ -50,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ title, type, action }) => {
     case 'menu':
       return (
         <View py="md" flexDir="row" alignItems="center" position="relative">
-          {refresh()}
+          {refreshIcon()}
           {icon('menu', theme.fontSize['3xl'])}
 
           <View flex={1} alignItems="center" justifyContent="center">
@@ -69,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ title, type, action }) => {
           justifyContent="center"
           position="relative"
         >
-          {refresh()}
+          {refreshIcon()}
           <Text>{title}</Text>
         </View>
       );

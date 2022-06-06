@@ -13,10 +13,16 @@ const NoBackgroundWrapper: React.FC<NoBackgroundWrapperProps> = ({
   headerType = 'default',
   headerTitle = translate('core.header-title'),
   headerAction,
+  headerRefreshAction,
 }) => {
   return (
     <View px="lg" pt={getStatusBarHeight(true) + 5} flex={1}>
-      <Header type={headerType} title={headerTitle} action={headerAction} />
+      <Header
+        type={headerType}
+        title={headerTitle}
+        action={headerAction}
+        refresh={headerRefreshAction}
+      />
 
       <View flex={1}>{children}</View>
     </View>

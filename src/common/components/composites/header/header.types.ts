@@ -4,4 +4,5 @@ export interface HeaderProps {
   type: HeaderType;
   title: string;
   action?: () => void;
+  refresh?: () => void;
 }

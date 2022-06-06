@@ -4,4 +4,5 @@ export interface DefaultWrapperProps {
   headerTitle?: string;
   headerType?: HeaderType;
   headerAction?: () => void;
+  headerRefreshAction?: () => void;
 }
