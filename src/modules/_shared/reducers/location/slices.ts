@@ -8,13 +8,13 @@ import { getDeviceLocationData } from './thunks';
 import { LocationState } from './types';
 
 const initialState: LocationState = {
-  city: '',
-  state: '',
-  lat: 0,
-  long: 0,
+  city: null,
+  state: null,
+  lat: null,
+  long: null,
   hasError: false,
   isLoading: false,
-  isLocationEnable: true,
+  isLocationEnable: false,
 };
 
 const locationSlice = createSlice({
@@ -35,8 +35,8 @@ const locationSlice = createSlice({
         state.hasError = false;
       })
       .addCase(getDeviceLocationData.rejected, (state) => {
-        state.isLoading = true;
-        state.hasError = false;
+        state.isLoading = false;
+        state.hasError = true;
         state.isLocationEnable = false;
       })
       .addCase(

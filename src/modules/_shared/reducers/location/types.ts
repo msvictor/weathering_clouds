@@ -1,8 +1,8 @@
 export interface LocationState {
-  city: string;
-  state: string;
-  lat: number;
-  long: number;
+  city: string | null;
+  state: string | null;
+  lat: number | null;
+  long: number | null;
   hasError?: boolean;
   isLoading?: boolean;
   isLocationEnable?: boolean;

@@ -25,30 +25,34 @@ const Dashboard: React.FC = () => {
 
   const { theme } = useTheme();
 
+  const { weather, forecasts, isLoading } = useSelector(climateSelector);
   const { lat, long, city, state, isLocationEnable } =
     useSelector(locationSelector);
-  const { weather, forecasts, isLoading } = useSelector(climateSelector);
 
   const formatDegree = React.useCallback((temp) => {
     return `${temp.toFixed(0)} ${translate('weather.degree-symbol')}`;
   }, []);
 
   const getData = React.useCallback(async () => {
+    if (!isLocationEnable || (lat === null && long === null)) {
+      return;
+    }
+
     await Promise.all([
       dispatch(
         getCurrentWeather({
-          lat,
-          lon: long,
+          lat: lat as number,
+          lon: long as number,
         })
       ),
       dispatch(
         getForecasts({
-          lat,
-          lon: long,
+          lat: lat as number,
+          lon: long as number,
         })
       ),
     ]);
-  }, [dispatch, lat, long]);
+  }, [dispatch, isLocationEnable, lat, long]);
 
   React.useEffect(() => {
     getData();
@@ -72,7 +76,11 @@ const Dashboard: React.FC = () => {
   return (
     <DefaultWrapper headerRefreshAction={getData}>
       <ScrollView>
-        <ClimateStatus city={city} state={state} weather={weather} />
+        <ClimateStatus
+          city={city ?? ''}
+          state={state ?? ''}
+          weather={weather}
+        />
 
         <DashboardForecasts forecast={forecasts} />
 
