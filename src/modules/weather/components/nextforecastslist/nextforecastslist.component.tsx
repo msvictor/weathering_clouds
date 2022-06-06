@@ -1,12 +1,20 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 
+import { getBottomSpace } from 'react-native-iphone-x-helper';
+
 import { View } from '#common/components/primitives';
+import { translate } from '#common/utils/Translate';
+import { DateService } from '#modules/_shared/services';
 
 import { ForecastListItem } from './components';
 import { NextForecastsListProps } from './nextforecastslist.types';
 
 const NextForecastsList: React.FC<NextForecastsListProps> = ({ forecasts }) => {
+  const formatDegree = React.useCallback((temp) => {
+    return `${temp.toFixed(0)} ${translate('weather.degree-symbol')}`;
+  }, []);
+
   const separator = React.useCallback(
     () => <View h={0.5} bg="fxGray" opacity={0.2} />,
     []
@@ -16,8 +24,17 @@ const NextForecastsList: React.FC<NextForecastsListProps> = ({ forecasts }) => {
     <FlatList
       data={forecasts}
       keyExtractor={() => String(Math.random() * 10000)}
-      renderItem={() => <ForecastListItem date="TUE" min="15 C" max="24 C" />}
+      renderItem={({ item }) => (
+        <ForecastListItem
+          date={`${DateService.getFormattedDate(item.dt, 'E-HH:mm')}h`}
+          min={formatDegree(item.main.temp_min)}
+          max={formatDegree(item.main.temp_max)}
+        />
+      )}
       ItemSeparatorComponent={separator}
+      contentContainerStyle={{
+        paddingBottom: getBottomSpace(),
+      }}
     />
   );
 };

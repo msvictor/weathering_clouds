@@ -12,7 +12,7 @@ const ForecastItem: React.FC<ForecastItemProps> = ({ time, temp, icon }) => {
     <View
       p="lg"
       mr="md"
-      rounded="circle"
+      rounded="lg"
       position="relative"
       overflow="hidden"
       flexDir="column"
@@ -20,16 +20,8 @@ const ForecastItem: React.FC<ForecastItemProps> = ({ time, temp, icon }) => {
       justifyContent="space-between"
       borderWidth={0.5}
       borderColor="fxGray"
+      bg={`${theme.colors.fxGray}33`}
     >
-      <View
-        position="absolute"
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        bg="fxGray"
-        opacity={0.2}
-      />
       <Text mt="xs" fontSize="sm" fontWeight="300">
         {time}
       </Text>

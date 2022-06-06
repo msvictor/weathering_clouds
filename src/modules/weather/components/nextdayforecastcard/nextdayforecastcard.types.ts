@@ -1,9 +1,5 @@
+import { ForecastWeather } from '#modules/weather/services/ClimateService/types';
+
 export interface NextDayForecastCardProps {
-  date: string;
-  min: string;
-  max: string;
-  wind: string;
-  humidity: string;
-  visibility: string;
-  uv: string;
+  forecast: ForecastWeather;
 }

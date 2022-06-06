@@ -1,8 +1,7 @@
+import { CurrentWeatherData } from '#modules/weather/services/ClimateService/types';
+
 export interface ClimateStatusProps {
-  date: string;
-  temp: string;
   city: string;
   state: string;
-  sunset: string;
-  feelsLike: string;
+  weather: CurrentWeatherData;
 }

@@ -15,7 +15,8 @@
     "uv": "UV",
     "min": "Min",
     "max": "Max",
-    "degree-symbol": "°C"
+    "degree-symbol": "°C",
+    "forecast": "Forecast"
   },
   "location": {
     "permission-denied": "Opa, parece que não temos permissão para acessar sua localização. Por favor ative o compartilhamento de localização no menu de configuraçoes para prosseguir."

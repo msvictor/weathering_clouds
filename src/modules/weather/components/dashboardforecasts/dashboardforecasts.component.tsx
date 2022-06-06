@@ -25,7 +25,7 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
     <View flex={2}>
       <View
         mx="xl"
-        my="md"
+        mt="xl"
         mb="lg"
         flexDir="row"
         alignItems="center"
@@ -39,7 +39,7 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
           borderColor="text"
           fontWeight="700"
         >
-          {translate('weather.today')}
+          {`${translate('weather.today')} ${translate('weather.forecast')}`}
         </Text>
 
         <TouchableOpacity onPress={handleNavigateToNextForecast}>

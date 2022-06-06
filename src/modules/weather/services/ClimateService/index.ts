@@ -2,8 +2,11 @@ import { AxiosError } from 'axios';
 
 import GenericError from '#core/error/GenericError';
 import { httpOpenWeather } from '#core/providers/http';
+import { LoggerService } from '#core/services';
 
 import { CurrentWeatherData, NextForecasts } from './types';
+
+const LOGGER_COMPONENT_NAME = 'ClimateService';
 
 export const fetchCurrentWeather = async (
   lat: number,
@@ -19,6 +22,12 @@ export const fetchCurrentWeather = async (
 
     return data;
   } catch (error) {
+    LoggerService.print({
+      component: LOGGER_COMPONENT_NAME,
+      method: fetchCurrentWeather.name,
+      params: error,
+    });
+
     if (error instanceof AxiosError) {
       throw error;
     }
@@ -41,6 +50,12 @@ export const fetchForecast = async (
 
     return data;
   } catch (error) {
+    LoggerService.print({
+      component: LOGGER_COMPONENT_NAME,
+      method: fetchForecast.name,
+      params: error,
+    });
+
     if (error instanceof AxiosError) {
       throw error;
     }

@@ -4,18 +4,32 @@ import { Icon, Text, View } from '#common/components/primitives';
 import { useTheme } from '#common/hooks';
 import { normalize } from '#common/utils/DynamicRatio';
 import { translate } from '#common/utils/Translate';
+import { DateService } from '#modules/_shared/services';
 
 import { ClimateStatusProps } from './climatestatus.types';
 
 const ClimateStatus: React.FC<ClimateStatusProps> = ({
-  date,
-  temp,
   city,
   state,
-  sunset,
-  feelsLike,
+  weather,
 }) => {
   const { theme } = useTheme();
+
+  const { temp, feelsLike, sunset, date } = React.useMemo(() => {
+    return {
+      temp: weather.main.temp.toFixed(0),
+      date: DateService.getFormattedDate(weather.dt, 'EE, d MMM'),
+      sunset: DateService.getFormattedDate(weather.sys.sunset, 'HH:mm'),
+      feelsLike: `${weather.main.feels_like.toFixed(0)} ${translate(
+        'weather.degree-symbol'
+      )}`,
+    };
+  }, [
+    weather.dt,
+    weather.main.temp,
+    weather.sys.sunset,
+    weather.main.feels_like,
+  ]);
 
   return (
     <View
