@@ -7,6 +7,11 @@
     "sunset": "Sunset",
     "feels-like": "Feels Like",
     "next-7-days": "Next 7 Days",
-    "info": "Infos"
+    "next-7-days-forecast": "Next 7 Days Forecast",
+    "info": "Infos",
+    "wind": "Wind",
+    "humidity": "Humidity",
+    "visibility": "Visibility",
+    "uv": "UV"
   }
 }
