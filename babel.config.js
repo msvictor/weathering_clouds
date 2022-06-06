@@ -19,6 +19,10 @@ module.exports = function(api) {
               rootPathPrefix: '#modules',
               rootPathSuffix: 'src/modules',
             },
+            {
+              rootPathPrefix: '#mocks',
+              rootPathSuffix: 'src/mocks',
+            },
           ],
         },
       ],

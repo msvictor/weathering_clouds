@@ -12,7 +12,8 @@
     "paths": {
       "#common*": ["common*"],
       "#core*": ["core*"],
-      "#modules*": ["modules*"]
+      "#modules*": ["modules*"],
+      "#mocks*": ["mocks*"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
