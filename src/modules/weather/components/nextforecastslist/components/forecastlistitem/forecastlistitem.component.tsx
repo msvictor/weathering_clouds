@@ -9,6 +9,7 @@ const ForecastListItem: React.FC<ForecastListItemProps> = ({
   date,
   min,
   max,
+  icon,
 }) => {
   const { theme } = useTheme();
 
@@ -24,11 +25,7 @@ const ForecastListItem: React.FC<ForecastListItemProps> = ({
         {date}
       </Text>
 
-      <Icon
-        name="cloud"
-        size={theme.fontSize.lg}
-        color={theme.colors.fxLightBlue}
-      />
+      <Icon name={icon} size={theme.fontSize.lg} color={theme.colors.fxGray} />
 
       <Text fontWeight="bold" color="fxGray" opacity={0.5}>
         min: {min}

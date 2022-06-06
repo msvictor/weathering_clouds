@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 
 import { Icon, ScrollView, Text, View } from '#common/components/primitives';
+import { getIconByApiName } from '#common/components/primitives/icon/icon.service';
 import { useTheme } from '#common/hooks';
 import { translate } from '#common/utils/Translate';
 import AppRoutesNames from '#core/routes/app/routes.names';
@@ -60,7 +61,7 @@ const DashboardForecasts: React.FC<DashboardForecastsProps> = ({
         {forecast.map((item) => (
           <ForecastItem
             key={Math.random().toString()}
-            icon="cloud"
+            icon={getIconByApiName(item.weather[0].icon)}
             temp={`${item.main.temp_min.toFixed(0)} ${translate(
               'weather.degree-symbol'
             )}`}

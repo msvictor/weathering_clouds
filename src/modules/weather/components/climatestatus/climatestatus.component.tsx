@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Icon, Text, View } from '#common/components/primitives';
+import { getIconByApiName } from '#common/components/primitives/icon/icon.service';
 import { useTheme } from '#common/hooks';
 import { normalize } from '#common/utils/DynamicRatio';
 import { translate } from '#common/utils/Translate';
@@ -41,7 +42,7 @@ const ClimateStatus: React.FC<ClimateStatusProps> = ({
     >
       <View flexDir="row" alignItems="center" mb="sm">
         <Icon
-          name="cloud"
+          name={getIconByApiName(weather.weather[0].icon)}
           color={theme.colors.text}
           size={theme.fontSize['5xl']}
         />
