@@ -25,7 +25,7 @@ const getDeviceLocation = async (): Promise<GetDeviceLocationResponse> => {
     });
     deviceLocation = {
       ...deviceLocation,
-      city: location[0].city,
+      city: location[0].subregion,
       state: location[0].region,
     };
   }
