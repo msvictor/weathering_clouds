@@ -13,7 +13,11 @@ const ClimateCardInfo: React.FC<ClimateCardInfoProps> = ({
   const { theme } = useTheme();
   return (
     <View w="48%">
-      <Card bg={`${theme.colors.fxGray}33`} shadowColor="text">
+      <Card
+        bg={`${theme.colors.fxGray}33`}
+        shadowColor="text"
+        shadowOffset="none"
+      >
         <Text fontWeight="700" fontSize="xs" mb="sm" textAlign="center">
           {title}
         </Text>
