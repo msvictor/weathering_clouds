@@ -51,5 +51,13 @@
 	<false/>
   <key>UIStatusBarStyle</key>
   <string>UIStatusBarStyleDefault</string>
+  <key>NSLocationUsageDescription</key>
+	<string>Para você ter uma experiência melhor ao utilizar o app, acessaremos a sua localização.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Para você ter uma experiência melhor ao utilizar o app, acessaremos a sua localização.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Para você ter uma experiência melhor ao utilizar o app, acessaremos a sua localização.</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Para você ter uma experiência melhor ao utilizar o app, acessaremos a sua localização.</string>
 </dict>
 </plist>
