@@ -111,7 +111,7 @@ export const ModalProvider: React.FC = ({ children }) => {
             opacity={opacity}
             style={{
               ...props.style,
-              backgroundColor: theme.colors.fxDarkest,
+              backgroundColor: theme.colors.fxGray,
             }}
           />
         )}
