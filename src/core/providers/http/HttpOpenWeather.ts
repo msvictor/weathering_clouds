@@ -14,6 +14,10 @@ class HttpOpenWeather {
         lang: Config.API_LANG,
         units: Config.API_UNIT,
       },
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
+      },
     });
     this.initInterceptors();
   }
