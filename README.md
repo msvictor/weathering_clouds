@@ -347,6 +347,8 @@ import { View, Text } from '#common/components/primitives';
 
 ## :octocat:Clone this repo
 
+> First of all: this project use OpenWeatherMap Api, then to consume the weather-related data  you need to create an api key at: https://openweathermap.org/api. This key will be used on .env file as a environment variables on API_KEY field.
+
 1. On command line terminal:
 ```sh
   $ https://github.com/msvictor/weathering_clouds.git
