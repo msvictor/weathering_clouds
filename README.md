@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-   <a href="https://github.com/VictorGabrielMS">
+   <a href="https://github.com/msvictor">
     <img alt="Code by Victor Gabriel" src="https://img.shields.io/badge/code%20by-Victor Gabriel-%23E02041">
   </a>
 </p>
